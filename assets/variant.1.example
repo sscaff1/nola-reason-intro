@@ -1,0 +1,11 @@
+/* shorthand definition for a switch */
+let getVehicleDescription =
+  fun
+  | None => "No Vehicle Present"
+  | Car => "Two front-wheels and Two back-wheels"
+  | Motorcycle => "One front-wheel and One back-wheel"
+  /* Destructuring of variables and string interpolation Bucklescript style */
+  | MadeUp({frontWheels, backWheels}) => {j| $frontWheels front-wheels and $backWheels back-wheels|j};
+
+/* Applying my switch */
+let madeUpCar = MadeUp({frontWheels: 2, backWheels: 3});

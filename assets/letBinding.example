@@ -1,0 +1,2 @@
+let myMessage = "Hello from let binding";
+Js.log(myMessage);

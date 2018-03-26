@@ -1,0 +1,9 @@
+/* Create a cube (w, h, d) - the below construct is known as a tuple */
+let cube = (2, 12, 3);
+
+/* Now use some pattern matching on the tuple */
+let getCube1Makeup =
+  switch (cube) {
+  | (w, h, d) when h > w && h > d => "You have a tall skinny cube"
+  | (_, _, _) => "You have a cube"
+  };

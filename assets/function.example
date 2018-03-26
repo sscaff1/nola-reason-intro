@@ -1,0 +1,7 @@
+let sum = (x, y, z) => x + y + z; /* signature (int, int, int) => int */
+let addTwoAndThree = sum(2, 3); /* Taking advantage of currying */
+5 |> addTwoAndThree; /* Pipeline operator assigns 5 to z (10 will be the sum) */
+/* labeled function with optional argument */
+let sum2 = (~x, ~y=2., ()) => x +. y; /* signature (~x:float, ~y:float=?, unit) => float; */
+let add3 = sum2(~x=3.); /* add3 is another function since everything is curried */
+sum(~x=3., ()); /* however calling sum2 with unit means I'm done and I want the sum */

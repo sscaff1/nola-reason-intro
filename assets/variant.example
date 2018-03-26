@@ -1,0 +1,18 @@
+/* Record defintion to be used for my variant */
+type wheels = {
+  frontWheels: int,
+  backWheels: int,
+};
+
+/* Definition of my variant */
+type vehicle =
+  | None
+  | Car
+  | Motorcycle
+  | MadeUp(wheels);
+
+/* regular switch function - note reason tells me I have a warning that this switch isn't exhaustive */
+let getVehicleDescriptionTemp = (v: vehicle) =>
+  switch (v) {
+  | None => "No Vehicle Present"
+  };

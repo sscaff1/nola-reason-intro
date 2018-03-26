@@ -1,0 +1,32 @@
+{
+  "name": "nola-reason-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bsb -make-world -clean-world",
+    "watch": "concurrently \"webpack --mode development -w\" \"bsb -make-world -clean-world -w\"",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bs-spectacle": "^1.0.1",
+    "raw-loader": "^0.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reason-react": "^0.3.4",
+    "spectacle": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-loader": "^8.0.0-beta.2",
+    "bs-platform": "^2.2.2",
+    "concurrently": "^3.5.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
+}
