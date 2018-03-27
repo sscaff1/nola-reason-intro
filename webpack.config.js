@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: './lib/js/re/index.js',
+  entry: {
+    main: './lib/js/re/index.js',
+    slider: './lib/js/re/slider.js',
+  },
   module: {
     rules: [
       {

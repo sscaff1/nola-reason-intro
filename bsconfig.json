@@ -4,7 +4,7 @@
     "react-jsx": 2
   },
   "bsc-flags": ["-bs-super-errors"],
-  "bs-dependencies": ["reason-react", "bs-spectacle"],
+  "bs-dependencies": ["reason-react", "bs-spectacle", "bs-webapi"],
   "sources": [
     {
       "dir": "re"
