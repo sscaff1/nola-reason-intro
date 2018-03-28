@@ -12,12 +12,12 @@ let theme =
       {
         primary: {
           name: "Montserrat",
-          googleFont: true,
+          googleFont: false,
           styles: [|"300"|],
         },
         secondary: {
           name: "Helvetica",
-          googleFont: true,
+          googleFont: false,
           styles: [|"100"|],
         },
         tertiary: simpleFont("monospace"),
@@ -34,12 +34,23 @@ let make = _children => {
   render: _self =>
     <Deck transition=[|Fade, Slide|] theme>
       <Slide bgColor="secondary">
-        <Heading> (s("Reason Intro")) </Heading>
+        <Heading fit=true> (s("Reason & BuckleScript Intro")) </Heading>
         <Text textFont="secondary"> (s("Front-End Party March 2018")) </Text>
         <Text textFont="quarternary"> (s("Steven Scaffidi")) </Text>
+        <Text textFont="secondary">
+          <Link href="https://github.com/sscaff1" target="_blank">
+            <i className="fab fa-github" />
+          </Link>
+          <Link href="https://twitter.com/Steven_Scaffidi" target="_blank">
+            <i className="fab fa-twitter" />
+          </Link>
+          <Link href="mailto:sscaff1@gmail.com">
+            <i className="fas fa-envelope" />
+          </Link>
+        </Text>
       </Slide>
       <Slide>
-        <Heading> (s("What is Reason?")) </Heading>
+        <Heading fit=true> (s("What is Reason?")) </Heading>
         <List>
           <ListItem> (s("New syntax and toolchain for OCaml")) </ListItem>
           <ListItem> (s("Developed by Facebook")) </ListItem>
@@ -52,11 +63,8 @@ let make = _children => {
         </List>
       </Slide>
       <Slide>
-        <Heading textSize="5rem">
-          (s("How does BuckleScript play a role?"))
-        </Heading>
+        <Heading fit=true> (s("What is BuckleScript?")) </Heading>
         <List>
-          <ListItem> (s("Interop with JavaScript")) </ListItem>
           <ListItem>
             (s("Compiles Reason/OCaml to readable JavaScript"))
           </ListItem>
@@ -131,6 +139,38 @@ let make = _children => {
             {| require('raw-loader!../../../assets/variant.2.example')|}
           ]
         />
+      </Slide>
+      <Slide>
+        <Heading> (s("Example")) </Heading>
+        <Link href="slider.html" target="_blank" textColor="secondary">
+          (s("Slider"))
+        </Link>
+      </Slide>
+      <Slide bgColor="secondary">
+        <Heading> (s("Questions?")) </Heading>
+        <Text textFont="secondary">
+          <Link href="http://nola-reason-intro.surge.sh/" target="_blank">
+            (s("Presentation"))
+          </Link>
+        </Text>
+        <Text textFont="secondary">
+          <Link
+            href="https://github.com/sscaff1/nola-reason-intro"
+            target="_blank">
+            (s("Source Code"))
+          </Link>
+        </Text>
+        <Text textFont="secondary">
+          <Link href="https://github.com/sscaff1" target="_blank">
+            <i className="fab fa-github" />
+          </Link>
+          <Link href="https://twitter.com/Steven_Scaffidi" target="_blank">
+            <i className="fab fa-twitter" />
+          </Link>
+          <Link href="mailto:sscaff1@gmail.com">
+            <i className="fas fa-envelope" />
+          </Link>
+        </Text>
       </Slide>
     </Deck>,
 };
