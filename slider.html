@@ -6,10 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Reason Intro</title>
+  <style>
+    .container {
+      display: flex;
+      width: 100vw;
+    }
+
+    .slide {
+      text-align: center;
+      position: absolute;
+      transition: all 1s;
+    }
+
+    .before {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    .after {
+      left: 100vw;
+    }
+
+    .active {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div class="container">
+    <div class="slide before">
+      <img src="https://images.pexels.com/photos/159692/dog-training-joy-fun-159692.jpeg?auto=compress&cs=tinysrgb&h=350" />
+    </div>
+    <div class="slide active">
+      <img src="https://images.pexels.com/photos/838409/pexels-photo-838409.jpeg?auto=compress&cs=tinysrgb&h=350" />
+    </div>
+    <div class="slide after">
+      <img src="https://images.pexels.com/photos/137020/pexels-photo-137020.jpeg?auto=compress&cs=tinysrgb&h=350" />
+    </div>
+    <div class="slide after">
+      <img src="https://images.pexels.com/photos/247522/pexels-photo-247522.jpeg?auto=compress&cs=tinysrgb&h=350" />
+    </div>
+  </div>
   <script src="dist/slider.js"></script>
 </body>
 
