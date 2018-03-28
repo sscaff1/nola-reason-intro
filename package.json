@@ -9,8 +9,14 @@
     "watch": "concurrently \"bsb -make-world -w\" \"webpack --mode development -w\"",
     "clean": "bsb -clean-world"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "bucklescript intro",
+    "reason intro",
+    "reason webapi example",
+    "reasonml",
+    "javascript"
+  ],
+  "author": "Steven Scaffidi (sscaff1@gmail.com)",
   "license": "ISC",
   "dependencies": {
     "bs-spectacle": "^1.0.1",
